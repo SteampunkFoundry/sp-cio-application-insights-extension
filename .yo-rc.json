@@ -1,0 +1,17 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "application-insights",
+    "libraryId": "340fc111-90d0-4155-932c-7596b44c2800",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "application-insights",
+    "solutionShortDescription": "application-insights description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "ApplicationCustomizer"
+  }
+}

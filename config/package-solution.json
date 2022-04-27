@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "application-insights-client-side-solution",
+    "id": "340fc111-90d0-4155-932c-7596b44c2800",
+    "version": "1.0.0.29",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "application-insights description"
+      },
+      "longDescription": {
+        "default": "application-insights description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "2bdfacd7-6c03-450d-a029-77d628a49d49",
+        "version": "1.0.0.29",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"            
+          ]
+        }
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/application-insights.sppkg"
+  }
+}

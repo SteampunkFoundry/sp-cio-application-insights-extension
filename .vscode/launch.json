@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Hosted workbench",
+      "type": "pwa-chrome",
+      "request": "launch",
+      "url": "https://sesolutionsinc.sharepoint.com/sites/punku-university?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={%22f0678169-75a5-4f83-bdbc-08abbbd8837c%22:{%22location%22:%22ClientSideExtension.ApplicationCustomizer%22,%20%22properties%22:%20{%22key%22%20:%20%221a3f9226-224a-4802-9793-ba64f10437ec%22}}}",
+      "webRoot": "${workspaceRoot}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:///.././src/*": "${webRoot}/src/*",
+        "webpack:///../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../src/*": "${webRoot}/src/*",
+        "webpack:///../../../../../src/*": "${webRoot}/src/*"
+      },
+      "runtimeArgs": [
+        "--remote-debugging-port=9222"
+      ]
+    }
+  ]
+}

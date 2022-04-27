@@ -1,0 +1,35 @@
+{
+  "id": "f0678169-75a5-4f83-bdbc-08abbbd8837c",
+  "alias": "ApplicationInsightsApplicationCustomizer",
+  "componentType": "Extension",
+  "extensionType": "ApplicationCustomizer",
+  "version": "1.0.2",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "loaderConfig": {
+    "internalModuleBaseUrls": [
+      "<!-- PATH TO CDN -->"
+    ],
+    "entryModuleId": "application-insights-application-customizer",
+    "scriptResources": {
+      "application-insights-application-customizer": {
+        "type": "path",
+        "path": "application-insights-application-customizer_b5087b55b59167ac83eb.js"
+      },
+      "@microsoft/sp-application-base": {
+        "type": "component",
+        "id": "4df9bb86-ab0a-4aab-ab5f-48bf167048fb",
+        "version": "1.14.0"
+      },
+      "@microsoft/sp-core-library": {
+        "type": "component",
+        "id": "7263c7d0-1d6a-45ec-8d85-d4d1d234171b",
+        "version": "1.14.0"
+      },
+      "ApplicationInsightsApplicationCustomizerStrings": {
+        "type": "path",
+        "path": "ApplicationInsightsApplicationCustomizerStrings_en-us_918e1ee58d373dc706cd1d3e58ebec88.js"
+      }
+    }
+  }
+}
