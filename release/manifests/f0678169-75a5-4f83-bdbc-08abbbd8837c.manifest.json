@@ -8,13 +8,13 @@
   "requiresCustomScript": false,
   "loaderConfig": {
     "internalModuleBaseUrls": [
-      "<!-- PATH TO CDN -->"
+      "https://spctostorage.blob.core.windows.net/application-insights/"
     ],
     "entryModuleId": "application-insights-application-customizer",
     "scriptResources": {
       "application-insights-application-customizer": {
         "type": "path",
-        "path": "application-insights-application-customizer_b5087b55b59167ac83eb.js"
+        "path": "application-insights-application-customizer_ac5c68bb8855250fa65c.js"
       },
       "@microsoft/sp-application-base": {
         "type": "component",

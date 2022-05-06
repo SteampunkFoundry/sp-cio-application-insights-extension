@@ -53,19 +53,9 @@ export default class ApplicationInsightsApplicationCustomizer
   private _config: IAzureAppInsightsWebPartProps = undefined;
   private _excludedDependencies: string[] = [];
   
-  private _appInsightsInitializer = (telemetryItem: ITelemetryItem): boolean | void => {
-    if (telemetryItem) {
-      if (!!this._config.cloudRole) {
-        telemetryItem.tags['ai.cloud.role'] = this._config.cloudRole;
-      }
-      if (!!this._config.cloudRoleInstance) {
-        telemetryItem.tags['ai.cloud.roleInstance'] = this._config.cloudRoleInstance;
-      }
-    }
-  }
-
-  public onInit(): Promise<void> {
+  public onInit(): Promise<void> {  
     Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
+    console.log("AI Initialized!");
     
     this._config = {
       ...DEFAULT_PROPERTIES,
@@ -73,7 +63,8 @@ export default class ApplicationInsightsApplicationCustomizer
     };
 
     if (!this._config.enabled) {
-      console.info(`[AzureAppInsights Web Part] Tracking disabled. No analytics will be logged.`);
+      
+      console.log(`[AzureAppInsights Web Part] Tracking disabled. No analytics will be logged.`);
       return;
     }
 
@@ -110,10 +101,10 @@ export default class ApplicationInsightsApplicationCustomizer
         enableUnhandledPromiseRejectionTracking: true,
 
         // If true, the SDK will add two headers ('Request-Id' and 'Request-Context') to all CORS requests tocorrelate outgoing AJAX dependencies with corresponding requests on the server side. Default is false
-        enableCorsCorrelation: true,
+        enableCorsCorrelation: false,
 
         // If true, exceptions are not autocollected. Default is false.
-        disableExceptionTracking: !this._config.trackExceptions,
+        disableExceptionTracking: false,
 
         // Sets the distributed tracing mode. If AI_AND_W3C mode or W3C mode is set, W3C trace context headers (traceparent/tracestate) will be generated and included in all outgoing requests. AI_AND_W3C is provided for back-compatibility with any legacy Application Insights instrumented services.
         distributedTracingMode: DistributedTracingModes.AI_AND_W3C
@@ -121,10 +112,7 @@ export default class ApplicationInsightsApplicationCustomizer
     });
 
     this._appInsights.loadAppInsights();
-//    this._appInsights.addTelemetryInitializer(this._appInsightsInitializer);
     this._appInsights.setAuthenticatedUserContext(userId, userId, true);
-  //  this._appInsights.trackPageView();
-
     this._appInsights.trackPageView({
       name: document.title, uri: window.location.href,
       properties: {
@@ -139,7 +127,12 @@ export default class ApplicationInsightsApplicationCustomizer
       }
     });
     
-  
+    console.log(this.context.pageContext.web.absoluteUrl);
+    console.log(this.context.pageContext.web.serverRelativeUrl);
+    console.log(this.context.pageContext.user.displayName);
+    console.log(this.context.pageContext.user.email);
+    console.log(this.context.pageContext.user.loginName);
+
     return Promise.resolve();
   }
 }

@@ -3,8 +3,8 @@
   "solution": {
     "name": "application-insights-client-side-solution",
     "id": "340fc111-90d0-4155-932c-7596b44c2800",
-    "version": "1.0.1.0",
-    "includeClientSideAssets": true,
+    "version": "1.0.1.7",
+    "includeClientSideAssets": false,
     "skipFeatureDeployment": false,
     "isDomainIsolated": false,
     "developer": {
@@ -30,7 +30,7 @@
         "title": "Application Extension - Deployment of custom action",
         "description": "Deploys a custom action with ClientSideComponentId association",
         "id": "2bdfacd7-6c03-450d-a029-77d628a49d49",
-        "version": "1.0.1.0",
+        "version": "1.0.1.7",
         "assets": {
           "elementManifests": [
             "elements.xml"            
